@@ -1,49 +1,379 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
-body
-	font-size: 12px 
+$yell: #fffcce
+$yell_d: #fbf6a7
+$red: #f37777
+$brown: #57231b
+$rose: #e5e4dc
+$border: #f2f1ec
++font(pfdintextpro-bold, pfdintextpro-bold)
++font(pfdintextpro-extrathin, pfdintextpro-extrathin)
++font(pfdintextpro-italic, pfdintextpro-italic)
++font(pfdintextpro-light, pfdintextpro-light)
++font(pfdintextpro-medium, pfdintextpro-medium)
++font(pfdintextpro-regular, pfdintextpro-regular)
++font(pfdintextpro-thin, pfdintextpro-thin)
++font(pfdintextpro-bold, pfdintextpro-bold)
+=bold
+	font-family: "pfdintextpro-bold", Arial, sans-serif 
+=ethin
+	font-family: "pfdintextpro-extrathin", Arial, sans-serif 
+=it
+	font-family: "pfdintextpro-italic", Arial, sans-serif 
+=light
+	font-family: "pfdintextpro-light", Arial, sans-serif 
+=med
+	font-family: "pfdintextpro-medium", Arial, sans-serif 
+=reg
+	font-family: "pfdintextpro-regular", Arial, sans-serif 
+=thin
+	font-family: "pfdintextpro-thin", Arial, sans-serif 
+=arial
 	font-family: Arial, sans-serif 
-	line-height: 1.4
+body
+	min-width: 1024px
+	min-height: 500px
+	font-size: 12px  
+	line-height: 1.5
+	color: $brown
+	+med
+	background: $rose 
+	text-transform: uppercase
+	+selection
+		background: $yell
+	&.has-fixed-header
+		padding-top: 77px
+		.header
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			background: #fff 
+			+box-shadow(0 1px 3px rgba(0,0,0,.21))
+		.header__key
+			display: block
+		.header__drop
+			visibility: hidden
+			top: 100%
+			+opacity(0)
+			+box-shadow(0 0 10px rgba(#000,.6))
+			+tr
+			&.is-active
+				visibility: visible
+				+opacity(1)
+		.header__logo
+			width: 17.2%
+			height: 77px
+			line-height: 77px
+			i
+				+s(logo-s)
+a
+	text-decoration: none
+.wrap
+	+clr
+.wrapper
+	overflow: hidden
+.out
+	margin: 0 auto -62px 
+	padding: 0 10px 
+	position: relative
+	max-width: 1158px
+	min-width: 1024px
+	min-height: 100%
+	height: auto !important
+	height: 100%   
 
+.l-container
+	margin: 0 auto 
+	width: 978px
+.push
+	height: 62px
 
-// common blocks      
+.header
+	position: relative
+	z-index: 50000
+	min-width: 1024px
+	height: 77px
+	background: #fff  
+	+tr(box-shadow .2s linear)
+	a
+		color: $brown 
+.header__in
+	position: relative
+	margin: 0 auto  
+	height: 77px
+	max-width: 1158px
+	background: #fff 
+	+clr
+.header__key
+	position: relative
+	display: none
+	float: left
+	width: 77px
+	height: 77px
+	z-index: 2000
+	background: $yell_d
+	+tr
+	&:before
+		content: ""
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -6px 0 0 -9px
+		+s(nav)
+		+tr
+	&.is-active
+		background: $yell
+		&:before
+			+rotate(180)
+.header__drop
+	position: absolute
+	top: 188px
+	left: 0
+	z-index: 1000
+	width: 23.8%
+	background: #fff 
+.header__link
+	display: block
+	padding: 14px 0 15px 
+	border-top: 1px solid #e4e3e0 
+	letter-spacing: 1px 
+	background: $yell 
+	&:hover
+		strong
+			border-bottom-color: transparent  
+	i,div
+		display: inline-block
+		vertical-align: middle
+	i
+		margin: 0 10px 0 22px 
+	span
+		display: block
+		font-size: 11px
+	strong
+		+bold
+		display: inline-block
+		height: 22px
+		font-weight: normal
+		font-size: 18px
+		line-height: 1.44
+		border-bottom: 1px solid 
+.header__link-icon
+	width: 21.4%
+	text-align: center
+.header__nav
+	border-top: 1px solid #e4e3e0
+	padding: 40px 0 40px 21.4%
+	li
+		position: relative
+		margin-top: 13px
+		&:first-child
+			margin-top: 0
+		&.is-active
+			a
+				background: $yell_d
+				&:before
+					content: ""
+					position: absolute
+					left: -10px
+					top: 0 
+					+arr(10,21,$yell_d,br)
+				&:after
+					content: ""
+					position: absolute
+					right: -10px
+					top: 0 
+					+arr(10,21,$yell_d,tl)
+			span
+				border-bottom-color: transparent
+			
+	a
+		position: relative
+		padding: 0 4px 
+		display: inline-block
+		height: 21px
+		line-height: 23px
+		&:hover
+			span
+				border-bottom-color: transparent  
+	span
+		font-size: 12px
+		+bold
+		letter-spacing: 1px
+		border-bottom: 1px solid 
+		
+.header__logo	
+	position: relative
+	z-index: 2000
+	float: left
+	width: 23.8%
+	height: 188px
+	line-height: 188px
+	text-align: center
+	background: #fff
+	+hide-text
+	i
+		display: inline-block
+		vertical-align: middle
+		+s(logo)
+
+.header__search
+	float: left
+	position: relative
+	left: 0
+	z-index: 2001
+	width: 77px
+	height: 77px
+	+box
+	&.is-active
+		.header__search-wrap
+			width: 314px
+			left: -20px
+			right: -237px
+		.header__search-text
+			padding: 0 44px 0 52px 
+			background: #fffee7   
+			font-size: 12px
+			border: 1px solid #f4efaa
+		i
+			display: none
+		button
+			display: block 
+		.header__search-btn
+			+s(glass-red)
+	i
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 2
+		cursor: pointer
+	button
+		display: none
+		position: absolute
+		top: 50%
+		left: 20px
+		margin-top: -4px
+		+s(close)
+.header__search-wrap
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	width: 77px
+	+tr
+	
+.header__search-text
+	display: block
+	width: 100%
+	+box
+	height: 77px
+	border-left: 1px solid $border
+	border-right: 1px solid $border
+	+med
+	font-size: 0
+	color: $brown 
+	letter-spacing: 1px
+	background: #fafafa 
+.header__search-btn
+	position: absolute
+	right: 26px
+	top: 27px
+	+s(glass)
+	+hide-text
+.soc
+	float: left
+	height: 77px
+	line-height: 77px
+	padding: 0 1.5% 
+	width: 20.6%
+	font-size: 0
+	text-align: center
+	+box
+	a
+		display: inline-block
+		margin-left: 35px
+		vertical-align: middle
+		&:first-child
+			margin-left: 0
+.soc__vk
+	+s(soc-vk)
+.soc__fb
+	+s(soc-fb)
+.soc__tw
+	+s(soc-tw)
+.header__feedback
+	float: left
+	border-left: 1px solid $border 
+	border-right: 1px solid $border 
+	width: 17.3%
+	height: 77px
+	+box
+	+bold
+	line-height: 77px
+	text-align: center
+	+tr
+	letter-spacing: 1px
+	&:hover
+		color: $red 
+.header__cab
+	position: relative
+	float: left
+	padding: 0 1.1% 
+	width: 11.3%
+	+box
+	line-height: 77px
+	text-align: center
+	a  
+		display: inline-block
+		vertical-align: middle
+		padding: 9px 15px 6px
+		text-align: center
+		+bold
+		line-height: 1
+		letter-spacing: 1px 
+		border: 1px solid $yell_d 
+.header__logout
+	position: absolute
+	right: 7px
+	top: 9px
+	+s(close-s)
+.basket
+	overflow: hidden
+	background: $yell 
+	line-height: 77px
+.basket__img
+	float: left
+	width: 77px
+	height: 77px
+	text-align: center
+	background: $yell_d 
+	span
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		+s(basket)
+	em
+		position: absolute
+		right: -15px
+		top: -17px
+		width: 22px
+		height: 22px
+		text-align: center
+		line-height: 22px
+		color: #fff
+		+arial
+		font-size: 10px
+		font-style: normal
+		background: $red
+		+border-radius(50%)  
+.basket__info
+	display: block
+	letter-spacing: 1px
+	font-size: 14px
+	overflow: hidden
+	+light 
+	text-align: center
+	
+.div
+	height: 1000px
