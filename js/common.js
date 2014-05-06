@@ -30,4 +30,9 @@ head.ready(function() {
     $(document).scroll(function(){
         fixedMenu();
     });
+    console.log($(window).width());
+    $(window).resize(function(){
+    	console.log($(window).width());
+    })
 });
+

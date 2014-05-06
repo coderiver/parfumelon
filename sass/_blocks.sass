@@ -31,3 +31,190 @@
 	font-size: 24px
 	+light
 	text-transform: uppercase
+
+.items-wrap
+	+clr	
+.item
+	position: relative
+	float: left
+	margin: 0 0 -1px -2px
+	border: 1px solid $border
+	width: 20%
+	height: 331px
+	background: #fff 
+	+tr
+	&:nth-child(5n)
+		border-right: 0
+	&:nth-child(5n+1)
+		border-left: 0
+		margin-left: 0  
+	+r(w1100)
+		width: 25%
+		&:nth-child(5n)
+			border-right: 1px solid $border
+		&:nth-child(5n+1)
+			border-left: 1px solid $border
+			margin-left: -2px 
+		&:nth-child(4n)
+			border-right: 0
+		&:nth-child(4n+1)
+			border-left: 0
+			margin-left: 0 
+	&:hover
+		z-index: 100
+		border-color: #fff
+		.btn-action
+			+opacity(1)
+			visibility: visible
+			margin-top: 21px
+		.item__in
+			bottom: -38px
+			// top: -1px
+			// right: -1px
+			// left: -1px
+			// bottom: -1px
+			// padding: 1px
+			+box-shadow(0 0 30px rgba(#000, .5))
+	.btn-action
+		display: block
+		margin-top: 41px
+		+opacity(0)
+		visibility: hidden
+		+tr
+	.badge
+		top: 11px
+	.is-new
+		right: 15px
+		z-index: 3
+	.is-discount
+		right: 54px
+.item__in
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: #fff 
+	+tr(box-shadow .2s linear)
+.item__img
+	padding: 0 10px 
+	height: 225px
+	line-height: 225px
+	text-align: center
+	overflow: hidden
+	img
+		vertical-align: middle
+		max-width: 100%
+		height: auto
+		max-height: 100%
+.item__info	
+	padding: 0 21px 19px
+	letter-spacing: 0.5px 
+.item__name
+	height: 38px
+	overflow: hidden
+	a
+		display: inline-block
+		position: relative
+		color: $brown
+		line-height: 1.5 
+		+med
+		+tr
+		&:hover
+			color: $brown_l 
+			&:after
+				+opacity(1)
+		&:active
+			&:after
+				margin-left: 20px
+		&:after
+			content: ""
+			display: inline-block 
+			margin-left: 8px
+			+arr(8,9,$brown_l,r) 
+			+tr
+			+opacity(0)
+.item__price
+	color: $red 
+	font-size: 18px
+	+reg
+
+.btn-action
+	display: inline-block
+	padding: 12px 0 9px 
+	font-size: 10px
+	text-transform: uppercase
+	color: #fff 
+	+med
+	text-align: center
+	+box
+	background: $red  
+	+tr
+	&:hover
+		background: #ff5151 
+
+.badge
+	position: absolute
+	width: 45px
+	height: 45px
+	text-align: center
+	line-height: 45px
+	+border-radius(50%)
+	+arial
+	font-size: 10px
+	font-weight: bold
+	color: $brown 
+	&.is-new
+		background: $yell_d 
+	&.is-discount
+		background: $green 
+		
+.tab
+	padding: 40px 0 33px 
+	text-align: center
+	font-size: 24px
+	text-transform: uppercase
+	+light
+	color: $brown 
+.tab__title,
+.tab__link
+	display: inline-block
+	vertical-align: middle
+	line-height: 1
+.tab__title
+	margin-right: 18px
+.tab__link
+	position: relative
+	padding: 9px 8px 7px 
+	margin-left: 22px
+	color: $brown 
+	+tr
+	&:hover
+		color: $red 
+	&:after
+		content: ""
+		position: absolute
+		right: -12px
+		top: 0
+		+arr(12,40,$yell_d,tl) 
+		display: none
+	&:before
+		content: ""
+		position: absolute
+		left: -12px
+		top: 0
+		+arr(12,40,$yell_d,br) 
+		display: none
+	span
+		display: inline-block
+		border-bottom: 1px dotted 
+	&.is-active
+		background: $yell_d 
+		&:after,
+		&:before
+			display: block
+		&:hover
+			color: $brown 
+		span
+			border-bottom-color: transparent 
+	
