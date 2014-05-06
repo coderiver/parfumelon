@@ -12,9 +12,13 @@
 	letter-spacing: 1px
 	+bold
 	font-size: 12px   
+	text-transform: uppercase
 	+tr
 	&:hover
 		background: #fff   
+	&:active
+		&:after
+			right: 15px
 	&:after
 		content: ""
 		position: absolute
@@ -22,3 +26,8 @@
 		right: 30px  
 		margin-top: -7px
 		+s(arr1)
+		+tr(all .1s linear)
+.title
+	font-size: 24px
+	+light
+	text-transform: uppercase

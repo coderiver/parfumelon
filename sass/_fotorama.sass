@@ -374,36 +374,24 @@
 	position: absolute
 	z-index: 10
 
-@-moz-document url-prefix()
-	.fotorama__active
-	box-shadow: 0 0 0 transparent
-
-
-.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play
-	position: absolute
-	z-index: 11
-	cursor: pointer
-
 .fotorama__arr
-	position: absolute
-	width: 32px
-	height: 32px
-	top: 50%
-	margin-top: -16px
-
+	cursor: pointer
+	+opacity(.1)
 .fotorama__arr--prev
-	left: 0
-	background-position: 0 0
-
+	+s(arr-prev)
+	&:hover
+		+sp(arr-prev-red)
+		+opacity(1)
 .fotorama__arr--next
-	right: 0
-	background-position: -32px 0
-
+	+s(arr-next)
+	&:hover
+		+sp(arr-next-red)
+		+opacity(1)
 .fotorama__arr--disabled
 	pointer-events: none
 	cursor: default
 	*display: none
-	opacity: .1
+	
 
 .fotorama__fullscreen-icon
 	width: 32px

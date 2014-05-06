@@ -99,4 +99,116 @@
         +light
         letter-spacing: 1px
         line-height: 26px
-    
+.main
+    background: #fff         
+.partners
+    height: 177px
+    background: $yell_d 
+    .fotorama
+        position: relative
+        height: 177px
+        width: 100%
+    .fotorama__arr
+        position: absolute
+        top: 63px
+        z-index: 1000
+    .fotorama__arr--prev
+        left: 30px
+    .fotorama__arr--next
+        right: 30px
+        left: auto
+.partners__slide  
+    text-align: justify
+    padding: 0 104px 
+    height: 177px
+    line-height: 177px
+    &:after
+        content: ""
+        display: inline-block
+        width: 100%
+        height: 0
+    a
+        display: inline-block
+        vertical-align: middle
+    img
+        vertical-align: middle
+
+.about
+    margin: 0 auto 
+    padding: 54px 0 77px 
+    width: 787px
+    color: $brown
+    font-size: 12px
+    +arial
+    text-transform: none
+    +clr
+    background: url(../img/bg-img1.png) 8px 51px no-repeat 
+    p
+        margin-bottom: 22px
+    .btn-detail
+        &:hover
+            background: $yell_d 
+    .title
+        margin-bottom: 25px
+.about__img
+    float: left
+    margin: 66px 30px 0 0  
+    height: 75px
+    width: 75px
+    min-height: 1px
+    overflow: hidden
+    +border-radius(50%)
+.about__main
+    overflow: hidden
+.title
+    margin-bottom: 25px
+    font-size: 24px
+    +light
+    text-transform: uppercase
+
+.media
+    display: table
+    color: $brown 
+    .title
+        margin-bottom: 27px
+.media__about,
+.media__news,
+.media__soc
+    display: table-cell
+    vertical-align: top
+    width: 33%
+    border-left: 1px solid $border 
+    border-bottom: 1px solid $border 
+.media__about
+    text-transform: none
+    padding: 34px 36px 
+    border-left: 0
+    +arial
+    p
+        margin-bottom: 21px
+.media__news
+    padding: 34px 34px 29px
+.media__soc
+    text-align: center
+    padding: 46px 0 41px 
+.news
+    +clr
+    margin-bottom: 13px
+.news__img
+    float: left
+    margin-right: 15px
+    width: 85px
+    text-align: center
+    overflow: hidden
+.news__main
+    overflow: hidden
+.news__title
+    color: $brown
+    font-size: 12px 
+    line-height: 1.5
+    text-decoration: underline
+    &:hover
+        text-decoration: none
+.news__meta
+    margin-top: 10px
+    color: #ddd 
