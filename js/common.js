@@ -14,6 +14,7 @@ head.ready(function() {
 		return false;
 	});
 	$(".js-header-key").on("click", function(event){
+		$(this).toggleClass("is-active");
 		$(".js-header-drop").toggleClass("is-active");
 		return false;
 	});

@@ -3,7 +3,8 @@ $yell_d: #fbf6a7
 $red: #f37777
 $brown: #57231b
 $rose: #e5e4dc
-$border: #f2f1ec
+$border_l: #f2f1ec
+$border: #e4e3e0
 +font(pfdintextpro-bold, pfdintextpro-bold)
 +font(pfdintextpro-extrathin, pfdintextpro-extrathin)
 +font(pfdintextpro-italic, pfdintextpro-italic)
@@ -31,7 +32,7 @@ $border: #f2f1ec
 body
 	min-width: 1024px
 	min-height: 500px
-	font-size: 12px  
+	font-size: 12px	
 	line-height: 1.5
 	color: $brown
 	+med
@@ -49,20 +50,24 @@ body
 			background: #fff 
 			+box-shadow(0 1px 3px rgba(0,0,0,.21))
 		.header__key
-			display: block
+			display: inline-block
 		.header__drop
 			visibility: hidden
 			top: 100%
 			+opacity(0)
 			+box-shadow(0 0 10px rgba(#000,.6))
-			+tr
+			+tr(opacity .2s linear)
 			&.is-active
 				visibility: visible
 				+opacity(1)
 		.header__logo
-			width: 17.2%
-			height: 77px
+			left: 77px
 			line-height: 77px
+			a
+				position: static
+				display: block
+				height: 77px
+				line-height: 77px
 			i
 				+s(logo-s)
 a
@@ -72,41 +77,52 @@ a
 .wrapper
 	overflow: hidden
 .out
-	margin: 0 auto -62px 
+	margin: 0 auto
 	padding: 0 10px 
 	position: relative
 	max-width: 1158px
 	min-width: 1024px
 	min-height: 100%
 	height: auto !important
-	height: 100%   
+	height: 100%	 
 
 .l-container
 	margin: 0 auto 
 	width: 978px
-.push
-	height: 62px
 
 .header
 	position: relative
 	z-index: 50000
 	min-width: 1024px
 	height: 77px
-	background: #fff  
+	background: #fff	
 	+tr(box-shadow .2s linear)
 	a
 		color: $brown 
 .header__in
 	position: relative
-	margin: 0 auto  
+	margin: 0 auto	
 	height: 77px
 	max-width: 1158px
 	background: #fff 
+	+box
+.header__left
+	position: relative
+	float: left
+	height: 77px
+	width: 30.5%
+.header__right
+	position: relative
+	float: right
+	height: 77px
+	width: 69.5%
+	+clr
+.header__right-in
+	float: right
 	+clr
 .header__key
 	position: relative
 	display: none
-	float: left
 	width: 77px
 	height: 77px
 	z-index: 2000
@@ -128,18 +144,23 @@ a
 	position: absolute
 	top: 188px
 	left: 0
+	right: 77px
 	z-index: 1000
-	width: 23.8%
 	background: #fff 
 .header__link
 	display: block
 	padding: 14px 0 15px 
-	border-top: 1px solid #e4e3e0 
+	border-top: 1px solid $border
 	letter-spacing: 1px 
 	background: $yell 
+	+tr
 	&:hover
-		strong
-			border-bottom-color: transparent  
+		background: $red 
+		color: $yell_d
+		.icon-male
+			+sp(male-white)
+		.icon-female
+			+sp(female-white)
 	i,div
 		display: inline-block
 		vertical-align: middle
@@ -160,8 +181,8 @@ a
 	width: 21.4%
 	text-align: center
 .header__nav
-	border-top: 1px solid #e4e3e0
-	padding: 40px 0 40px 21.4%
+	border-top: 1px solid $border
+	padding: 40px 0 47px 21.4%
 	li
 		position: relative
 		margin-top: 13px
@@ -193,7 +214,7 @@ a
 		line-height: 23px
 		&:hover
 			span
-				border-bottom-color: transparent  
+				border-bottom-color: transparent	
 	span
 		font-size: 12px
 		+bold
@@ -201,27 +222,34 @@ a
 		border-bottom: 1px solid 
 		
 .header__logo	
-	position: relative
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	right: 77px
 	z-index: 2000
-	float: left
-	width: 23.8%
-	height: 188px
-	line-height: 188px
-	text-align: center
-	background: #fff
-	+hide-text
+	a
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 188px
+		line-height: 188px
+		text-align: center
+		background: #fff
+		+hide-text
 	i
 		display: inline-block
 		vertical-align: middle
 		+s(logo)
 
 .header__search
-	float: left
-	position: relative
-	left: 0
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
 	z-index: 2001
 	width: 77px
-	height: 77px
 	+box
 	&.is-active
 		.header__search-wrap
@@ -230,7 +258,7 @@ a
 			right: -237px
 		.header__search-text
 			padding: 0 44px 0 52px 
-			background: #fffee7   
+			background: #fffee7	 
 			font-size: 12px
 			border: 1px solid #f4efaa
 		i
@@ -260,7 +288,6 @@ a
 	right: 0
 	left: 0
 	bottom: 0
-	width: 77px
 	+tr
 	
 .header__search-text
@@ -268,8 +295,8 @@ a
 	width: 100%
 	+box
 	height: 77px
-	border-left: 1px solid $border
-	border-right: 1px solid $border
+	border-left: 1px solid $border_l
+	border-right: 1px solid $border_l
 	+med
 	font-size: 0
 	color: $brown 
@@ -282,11 +309,13 @@ a
 	+s(glass)
 	+hide-text
 .soc
-	float: left
-	height: 77px
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 567px
 	line-height: 77px
 	padding: 0 1.5% 
-	width: 20.6%
 	font-size: 0
 	text-align: center
 	+box
@@ -304,12 +333,13 @@ a
 	+s(soc-tw)
 .header__feedback
 	float: left
-	border-left: 1px solid $border 
-	border-right: 1px solid $border 
-	width: 17.3%
+	border-left: 1px solid $border_l 
+	border-right: 1px solid $border_l 
+	width: 200px
 	height: 77px
 	+box
 	+bold
+	font-size: 12px
 	line-height: 77px
 	text-align: center
 	+tr
@@ -320,11 +350,12 @@ a
 	position: relative
 	float: left
 	padding: 0 1.1% 
-	width: 11.3%
+	width: 131px
 	+box
+	font-size: 12px
 	line-height: 77px
 	text-align: center
-	a  
+	a	
 		display: inline-block
 		vertical-align: middle
 		padding: 9px 15px 6px
@@ -338,11 +369,12 @@ a
 	right: 7px
 	top: 9px
 	+s(close-s)
-.basket
-	overflow: hidden
+.header__basket
+	float: left
+	width: 236px
 	background: $yell 
 	line-height: 77px
-.basket__img
+.header__basket-img
 	float: left
 	width: 77px
 	height: 77px
@@ -366,8 +398,8 @@ a
 		font-size: 10px
 		font-style: normal
 		background: $red
-		+border-radius(50%)  
-.basket__info
+		+border-radius(50%)	
+.header__basket-info
 	display: block
 	letter-spacing: 1px
 	font-size: 14px
@@ -375,5 +407,36 @@ a
 	+light 
 	text-align: center
 	
-.div
-	height: 1000px
+.footer
+	margin: 0 auto
+	padding: 30px 35px 23px
+	border-top: 1px solid $border
+	max-width: 1158px
+	text-transform: none 
+	background: #fff 
+	+clr
+	+arial
+	+box
+	font-size: 0
+	color: $brown
+.footer__copy,
+.footer__cont,
+.footer__logo
+	display: inline-block
+	vertical-align: middle
+	font-size: 12px
+.footer__cont
+	margin: 0 13% 0 12.3%
+	p
+		margin-bottom: 10px
+	span
+		display: inline-block
+		margin-right: 20px
+		+med
+		font-size: 15px
+	a
+		color: $red 
+		&:hover
+			text-decoration: underline
+.footer__logo
+	+s(created)

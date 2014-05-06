@@ -13,68 +13,181 @@
 <div class="out">
 	<header class="header">
 		<div class="header__in">
-			<button class="header__key js-header-key"></button>
-			<div class="header__drop js-header-drop">
-				<a href="#" class="header__link">
-					<div class="header__link-icon"><i class="icon-female"></i></div>
-					<div>
-						<strong>женская</strong>
-						<span>парфюмерия</span>
+			<div class="header__left">
+				<button class="header__key js-header-key"></button>
+				<div class="header__drop js-header-drop">
+					<a href="#" class="header__link">
+						<div class="header__link-icon"><i class="icon-female"></i></div>
+						<div>
+							<strong>женская</strong>
+							<span>парфюмерия</span>
+						</div>
+					</a>
+					<a href="#" class="header__link">
+						<div class="header__link-icon"><i class="icon-male"></i></div>
+						<div>
+							<strong>Мужская</strong>
+							<span>парфюмерия</span>
+						</div>
+					</a>
+					<ul class="header__nav">
+						<li class="is-active"><a href="#"><span>Главная</span></a></li>
+						<li><a href="#"><span>Компания</span></a></li>
+						<li><a href="#"><span>Новости и акции</span></a></li>
+						<li><a href="#"><span>полезные Статьи</span></a></li>
+						<li><a href="#"><span>Оплата и доставка</span></a></li>
+						<li><a href="#"><span>Контакты</span></a></li>
+					</ul>
+				</div>
+				<div class="header__logo">
+					<a href="#">
+						<i></i>
+						Parfumelon Парфюмерия
+					</a>
+				</div>
+				<div class="header__search js-search">
+					<div class="header__search-wrap">
+						<form action="">
+							<input type="text" class="header__search-text js-search-text">
+							<input type="submit" class="header__search-btn">
+						</form>
+						<i class="js-search-key"></i>
+						<button class="js-search-clear" type="button"></button>
 					</div>
-				</a>
-				<a href="#" class="header__link">
-					<div class="header__link-icon"><i class="icon-male"></i></div>
-					<div>
-						<strong>Мужская</strong>
-						<span>парфюмерия</span>
-					</div>
-				</a>
-				<ul class="header__nav">
-					<li class="is-active"><a href="#"><span>Главная</span></a></li>
-					<li><a href="#"><span>Компания</span></a></li>
-					<li><a href="#"><span>Новости и акции</span></a></li>
-					<li><a href="#"><span>полезные Статьи</span></a></li>
-					<li><a href="#"><span>Оплата и доставка</span></a></li>
-					<li><a href="#"><span>Контакты</span></a></li>
-				</ul>
-			</div>
-			<a href="#" class="header__logo">
-				<i></i>
-				Parfumelon Парфюмерия
-			</a>
-			<div class="header__search js-search">
-				<div class="header__search-wrap">
-					<form action="">
-						<input type="text" class="header__search-text js-search-text">
-						<input type="submit" class="header__search-btn">
-					</form>
-					<i class="js-search-key"></i>
-					<button class="js-search-clear" type="button"></button>
 				</div>
 			</div>
-			<div class="soc">
-				<a href="#" class="soc__vk"></a>
-				<a href="#" class="soc__fb"></a>
-				<a href="#" class="soc__tw"></a>
-			</div>
-			<a class="header__feedback" href="#">связаться с нами</a>
-			<div class="header__cab">
-				<a href="#">личный кабинет</a>
-				<button class="header__logout"></button>
-			</div>
-			<div class="basket">
-				<a href="#" class="basket__img">
-					<span><em>0</em></span>
-				</a>
-				<a href="#" class="basket__info">Корзина пуста</a>
+			<div class="header__right">
+				<div class="soc">
+					<a href="#" class="soc__vk"></a>
+					<a href="#" class="soc__fb"></a>
+					<a href="#" class="soc__tw"></a>
+				</div>
+				<div class="header__right-in">
+					<a class="header__feedback" href="#">связаться с нами</a>
+					<div class="header__cab">
+						<a href="#">Войти</a>
+						<!-- <button class="header__logout"></button> -->
+					</div>
+					<div class="header__basket">
+						<a href="#" class="header__basket-img">
+							<span><em>0</em></span>
+						</a>
+						<a href="#" class="header__basket-info">Корзина пуста</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
-	<div class="div"></div>
-	<div class="push"></div>
+	<div class="promo-slider">
+		<div class="fotorama" data-width="100%">
+			<div data-img="img/slide1.png">
+				<div class="discount">
+					<div class="discount__title">Скидка</div>
+					<div class="discount__info">fragrance world</div>
+					<div class="discount__name">
+						<a href="#">Chance de fuagra</a>
+					</div>
+					<a href="#" class="discount__price">1 999р</a>
+					<div class="discount__percent">-20%</div>
+					<a href="#" class="btn-detail">Подробнее</a>
+				</div>
+			</div>
+			<div data-img="img/slide1.png">
+				<div class="discount">
+					<div class="discount__title">Скидка</div>
+					<div class="discount__info">fragrance world</div>
+					<div class="discount__name">
+						<a href="#">Chance de fuagra</a>
+					</div>
+					<a href="#" class="discount__price">1 999р</a>
+					<div class="discount__percent">-20%</div>
+					<a href="#" class="btn-detail">Подробнее</a>
+				</div>
+			</div>
+			<div data-img="img/slide1.png">
+				<div class="discount">
+					<div class="discount__title">Скидка</div>
+					<div class="discount__info">fragrance world</div>
+					<div class="discount__name">
+						<a href="#">Chance de fuagra</a>
+					</div>
+					<a href="#" class="discount__price">1 999р</a>
+					<div class="discount__percent">-20%</div>
+					<a href="#" class="btn-detail">Подробнее</a>
+				</div>
+			</div>
+			<div data-img="img/slide1.png">
+				<div class="discount">
+					<div class="discount__title">Скидка</div>
+					<div class="discount__info">fragrance world</div>
+					<div class="discount__name">
+						<a href="#">Chance de fuagra</a>
+					</div>
+					<a href="#" class="discount__price">1 999р</a>
+					<div class="discount__percent">-20%</div>
+					<a href="#" class="btn-detail">Подробнее</a>
+				</div>
+			</div>
+			<div data-img="img/slide1.png">
+				<div class="discount">
+					<div class="discount__title">Скидка</div>
+					<div class="discount__info">fragrance world</div>
+					<div class="discount__name">
+						<a href="#">Chance de fuagra</a>
+					</div>
+					<a href="#" class="discount__price">1 999р</a>
+					<div class="discount__percent">-20%</div>
+					<a href="#" class="btn-detail">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner-row">
+		<div class="banner-row__slider">
+			<div class="fotorama">
+				<div class="banner-row__slide">
+					<span>Преимущества</span>
+					<div>Бесплатная Доставка</div>
+				</div>
+				<div class="banner-row__slide">
+					<span>Преимущества</span>
+					<div>Бесплатная Доставка</div>
+				</div>
+				<div class="banner-row__slide">
+					<span>Преимущества</span>
+					<div>Бесплатная Доставка</div>
+				</div>
+				<div class="banner-row__slide">
+					<span>Преимущества</span>
+					<div>Бесплатная Доставка</div>
+				</div>
+				<div class="banner-row__slide">
+					<span>Преимущества</span>
+					<div>Бесплатная Доставка</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner-row__img">
+			<a href="#"><img src="img/banner1.png" alt="" height="185"></a>
+			<a href="#"><img src="img/banner2.png" alt="" height="185"></a>
+			<a href="#"><img src="img/banner3.png" alt="" height="185"></a>
+		</div>
+	</div>
 </div>
 <!-- END out-->
-
+<footer class="footer">
+	<div class="footer__copy">
+		© 2013 Perfumelon.ru
+	</div>
+	<div class="footer__cont">
+		<p>Прием заявок <br>
+		и консультация по телефонам:</p>
+		<p><span>+7 (915) 134-15-90</span>
+		<span>+7 (915) 173-15-90</span></p>
+		<p><a href="mailto:info@perfumelon.ru">info@perfumelon.ru</a></p>
+	</div>
+	<a href="#" class="footer__logo"></a>
+</footer>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>
