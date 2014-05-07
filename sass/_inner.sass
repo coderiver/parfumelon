@@ -60,6 +60,8 @@ blockquote
 	overflow: hidden
 	div
 		+column-count(2)
+		+column-gap(25px)
+
 .top-section
 	position: relative
 	padding: 44px 35px 0 
@@ -109,6 +111,7 @@ blockquote
 	+med
 	font-weight: normal
 	color: $yell_d 
+	letter-spacing: 1px 
 	
 .sort-row
 	text-align: justify
@@ -208,6 +211,23 @@ blockquote
 			z-index: 2
 			margin-top: -4px
 			+s(close-brown) 
+
+.sort
+	text-align: center
+	padding-bottom: 23px
+	a
+		display: inline-block
+		margin-left: 30px
+		color: #fff
+		font-size: 14px
+		text-decoration: underline
+		&:hover,
+		&.is-active
+			color: $brown 
+			+tr
+		&:first-child
+			margin-left: 0
+
 
 .tags-wrap
 	padding: 22px 35px 10px 
@@ -333,3 +353,85 @@ blockquote
 		&:after
 			display: none !important
 
+.posts-wrap
+	+clr
+.post
+	float: left
+	position: relative
+	width: 25%
+	height: 355px
+	background: $yell_d
+	border: 1px solid #fff
+	border-left: 0
+	+tr
+	+box
+	&:hover
+		z-index: 2
+		background: $red 
+		+box-shadow(0 0 30px rgba(#000, .5))
+		.post__meta
+			color: $yell_d 
+		.post__title
+			color: #fff
+			&:after
+				visibility: visible
+				+opacity(1)
+.post__img
+	display: block
+	height: 185px
+	line-height: 195px
+	text-align: center
+	overflow: hidden
+.post__main
+	padding: 10px 24px 10px
+	overflow: hidden
+.post__title
+	color: $brown 
+	font-size: 12px
+	line-height: 18px
+	+tr
+	text-decoration: underline
+	&:after
+		content: "" 
+		display: inline-block
+		margin-left: 2px
+		+arr(8,10,#fff,r)
+		visibility: hidden
+		+opacity(0)
+		+tr
+	&:hover
+		text-decoration: none 
+	&:active
+		&:after
+			margin-left: 20px
+.post__meta
+	margin-top: 11px
+	color: #bdbdbd 
+	+tr
+
+.pagin
+	padding: 52px 0 54px  
+	text-align: center
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 10px
+		width: 22px
+		height: 22px
+		line-height: 22px
+		+border-radius(50%)
+		vertical-align: top
+		font-size: 12px
+		text-align: center
+		+reg
+		color: $brown
+		+tr
+		&:hover
+		&.is-active
+			color: #fff
+			background: $red 
+		&:active
+			position: relative
+			top: 1px
+		&:first-child
+			margin-left: 0 
