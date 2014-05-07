@@ -2,7 +2,7 @@
 	position: relative
 	padding: 44px 35px 0 
 	text-align: center
-	background: url(../img/top-bg.jpg) 50% 0 no-repeat 
+	background: url(../img/top-bg.jpg) 50% -115px no-repeat 
 	&:after
 		content: "" 
 		position: absolute
@@ -16,16 +16,33 @@
 	position: relative
 	z-index: 2
 .breadcrumbs
+	position: relative
 	margin-bottom: 26px
 	text-transform: none
 	a
-		color: #fff
+		position: relative
+		display: inline-block
+		margin-left: 42px
+		color: #fff 
 		text-decoration: underline
 		&:hover
 			text-decoration: none
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			left: -24px 
+			width: 5px
+			height: 5px
+			+border-radius(50%)
+			background: #fff 
 		
 .page-title
-	margin-bottom: 80px
+	padding-bottom: 80px
 	font-size: 30px
 	+med
 	font-weight: normal
@@ -150,4 +167,98 @@
 	&.is-active
 		color: #fff
 		background: $red  
-	
+		
+.item-section
+	padding: 43px 35px 
+	+clr
+.gallery
+	float: left
+	margin-right: 53px
+	+clr
+.gallery__preview
+	float: left
+	width: 60px
+	a
+		position: relative
+		display: block
+		margin: 0 0 13px 
+		width: 60px 
+		height: 60px
+		line-height: 60px
+		text-align: center
+		overflow: hidden
+		+box
+		border: 1px solid #d295ae
+		&.is-active
+			&:before	
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background: rgba(#d295ae,.5)  
+	img
+		width: 100%
+		height: auto
+		vertical-align: middle
+		max-height: 100%
+.gallery__img
+	position: relative
+	float: left
+	width: 475px
+	height: 435px
+	text-align: center
+	line-height: 435px
+	overflow: hidden
+	img
+		vertical-align: middle
+		max-width: 95%
+		height: auto
+		max-height: 100%
+	.badge
+		top: 5px
+		right: 9px
+
+.item-info
+	overflow: hidden
+	padding-top: 23px
+	.title
+		margin-bottom: 11px
+	.price
+		margin-right: 17px
+.item-info__descr
+	margin-bottom: 20px
+	+arial
+	text-transform: none
+.item-info__list
+	margin: 20px 0 17px
+	li
+		margin-bottom: 6px
+	span
+		display: inline-block
+		margin-right: 7px
+		color: $red 
+	a
+		color: $brown
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.item-info__action
+	margin: 25px 0
+	.btn
+		margin-left: 18px
+		
+.slider-items
+	.fotorama
+		position: relative
+	.fotorama__nav-wrap
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 300
+	.title
+		margin-left: 35px
+	.fotorama__arr
+		display: none
