@@ -34,5 +34,31 @@ head.ready(function() {
     $(window).resize(function(){
     	console.log($(window).width());
     })
+
+    $(".js-sort-special-key a").on("click", function(){
+    	var el = $(this).attr("href");
+    	if ($(this).hasClass("is-active")) {
+    		$(this).removeClass("is-active");
+    		$(".js-sort-special").slideUp(200);
+    	}
+    	else {
+    		$(".js-sort-special-key a").removeClass("is-active");
+    		$(this).addClass("is-active");
+    		$(".js-sort-special").hide();
+    		$("."+el).slideDown(200);
+    	}
+		return false;
+	});
+	$(".js-sort-gender a").on("click", function(){
+    	$(".js-sort-gender a").removeClass("is-active");
+    	$(this).addClass("is-active");
+		return false;
+	});
+	$(".js-sort-options a").on("click", function(){
+    	$(".js-sort-options a").removeClass("is-active");
+    	$(this).addClass("is-active is-top-sort");
+		return false;
+	});
+
 });
 

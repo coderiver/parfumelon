@@ -1,0 +1,153 @@
+.top-section
+	position: relative
+	padding: 44px 35px 0 
+	text-align: center
+	background: url(../img/top-bg.jpg) 50% 0 no-repeat 
+	&:after
+		content: "" 
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 1
+		background: rgba(#e1a3c0, .85)   
+.top-section__in
+	position: relative
+	z-index: 2
+.breadcrumbs
+	margin-bottom: 26px
+	text-transform: none
+	a
+		color: #fff
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		
+.page-title
+	margin-bottom: 80px
+	font-size: 30px
+	+med
+	font-weight: normal
+	color: $yell_d 
+	
+.sort-row
+	text-align: justify
+	&:after
+		content: "" 
+		display: inline-block
+		width: 100%
+		height: 0
+		visibility: visible
+.sort-gender,
+.sort-options,
+.sort-special
+	display: inline-block
+	text-align: left
+	vertical-align: top
+	font-size: 0
+	
+	a
+		color: #fff
+		position: relative
+		font-size: 14px 
+.sort-gender
+	a
+		position: relative
+		margin-left: 18px
+		padding: 3px 6px 1px
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&:before
+			content: "/"
+			position: absolute 
+			left: -11px
+			top: 1px
+			color: #ffe5ef 
+	span
+		display: inline-block
+		border-bottom: 1px solid
+		line-height: 1 
+	.is-active
+		background: #fff
+		color: $red
+		span
+			border-bottom-color: transparent 
+	
+
+.sort-options
+	margin-left: -30px
+	a
+		padding: 3px 8px 1px
+	span
+		border-bottom: 1px dotted 
+	.is-active
+		padding: 3px 22px 1px 8px 
+		background: #fff
+		color: $red
+		span
+			border-bottom-color: transparent 
+		&.is-top-sort
+			&:after
+				content: ""
+				position: absolute
+				right: 8px
+				top: 7px
+				+arr(6,6,$red,t) 
+		&.is-down-sort
+			&:after
+				content: ""
+				position: absolute
+				right: 8px
+				top: 9px
+				+arr(6,6,$red,b) 
+.sort-special
+	a
+		margin-left: 7px
+		padding: 3px 8px 1px
+		background: #8f6c67 
+	.is-active
+		padding: 3px 30px 1px 8px 
+		background: #fff
+		color: #8f6c67
+		background: $yell_d  
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 21px
+			background: #fff  
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 6px
+			z-index: 2
+			margin-top: -4px
+			+s(close-brown) 
+
+.tags-wrap
+	padding: 22px 35px 10px 
+	background: $yell_d
+	font-size: 0
+	display: none
+.tag
+	display: inline-block
+	padding: 4px 13px 3px 
+	margin: 0 14px 14px 0 
+	vertical-align: top
+	background: #fff
+	color: $red
+	+arial
+	font-size: 12px
+	text-transform: none  
+	+tr
+	&:hover,
+	&.is-active
+		color: #fff
+		background: $red  
+	
