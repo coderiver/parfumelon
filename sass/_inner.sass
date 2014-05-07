@@ -80,6 +80,9 @@ blockquote
 	div
 		+column-count(2)
 		+column-gap(25px)
+	.btn-detail
+		color: $brown
+		text-decoration: none 
 .content__in
 	padding: 50px 0 105px 111px
 	width: 690px
@@ -143,7 +146,7 @@ blockquote
 	+med
 	font-weight: normal
 	color: $yell_d 
-	letter-spacing: 1px 
+	letter-spacing: 2px 
 	
 .sort-row
 	text-align: justify
@@ -468,3 +471,38 @@ blockquote
 			top: 1px
 		&:first-child
 			margin-left: 0 
+.map
+	position: relative
+	overflow: hidden		
+.map__body
+	height: 430px
+.map__window
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	padding: 33px 0 0 70px
+	width: 300px
+	background: $red 
+	background: rgba($red,.9) 
+	+arial
+	font-size: 12px
+	color: #fff
+	text-transform: none
+	.title
+		margin-left: 23px
+	p
+		margin-bottom: 30px
+	strong
+		display: block
+		margin-bottom: 6px
+		color: $yell_d
+		font-weight: normal
+		+bold
+		letter-spacing: 1px 
+		text-transform: uppercase
+	a
+		text-decoration: underline
+		color: #fff
+		&:hover
+			text-decoration: none 

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>News in</title>
+	<title>Contacts</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -82,21 +82,78 @@
 		<div class="top-section__in">
 			<div class="breadcrumbs">
 				<a href="#">Главная</a>
-				<a href="#">Новости и акции</a>
 			</div>
-			<h1 class="page-title">Новости и акции</h1>
+			<h1 class="page-title">контактная информация</h1>
 		</div>
 	</div>
-	<div class="content content_bottom-bg">
-		<div class="content__in">
-			<h2>акция на духи viva la juicy! Спешите подарить любимой наслаждение!</h2>
-			<img src="http://lorempixel.com/690/241" alt="">
-			<p><strong>Этот аромат создан специально для самых смелых и дерзских женщин! Мускус и сандал придают букету свежих фруктов незабываемыую нотку дерзости, делая запах неповторимым, придавая индивидуальность смелому и очень женственному образу вашей любимой женщины.</strong></p>
-			<div>
-				<p>Мужчины, подарите вашей любимой самый незабываемый запах и вы увидете, как она расцветёт в облаке из самого дерзкого запаха Viva la juicy!</p>
-				<p>Всю продукцию находящуюся на акции вы можете заказать с доставкой на дом по очень выгодным предложениям. Спешите! Акция действительна до 14 января!</p>
-			</div>
-			<a href="#" class="link-back">Вернуться ко всем новостям и акциям</a>
+	<div class="map">
+		<div id="map-canvas" class="map__body"></div>
+		<script>
+		  	function initialize() {
+			    var mapOptions = {
+			      	zoom: 15,
+			      	center: new google.maps.LatLng(53.939732, 27.601440),
+			      	disableDefaultUI: true,
+			      	scrollwheel: false,
+			     	zoomControl: true,
+			    	zoomControlOptions: {
+			        	style: google.maps.ZoomControlStyle.DEFAULT
+			      	},
+			      	mapTypeId: google.maps.MapTypeId.ROADMAP
+			    }
+			    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			    var image = 'img/marker.png';
+			    var myLatLng1 = new google.maps.LatLng(53.939732, 27.601440);
+			    var marker1 = new google.maps.Marker({
+				      position: myLatLng1,
+				      map: map,
+				      title: 'Uluru (Ayers Rock)', 
+				      icon: image
+				});
+			    var contentString1 =	'<div style="width:200px;height: 80px">'
+						+'<p>115 E.23rd Street </p>'
+						+'<p>3rd. Floor </p>'
+						+'<p>New York, NY</p>'
+						+'<p>10010</p>'+
+					'</div>';
+			  	var infowindow1 = new google.maps.InfoWindow({
+				    content: contentString1
+				});
+				// google.maps.event.addListener(marker1, 'click', function(){
+				//     infowindow1.open(map,marker1);
+				//     infowindow2.open(map,marker2);
+				// });
+				// //infowindow1.open(map,marker1);
+				// infowindow2.open(map,marker2);
+
+			}
+		  	// Asynchronous Loading
+			function loadScript() {
+			  var script = document.createElement('script');
+			  script.type = 'text/javascript';
+			  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+			      'callback=initialize';
+			  document.body.appendChild(script);
+			}
+			window.onload = loadScript;
+		</script>
+		<div class="map__window">
+			<div class="title">адрес офиса</div>
+			<p>ОАО “Perfumelon” <br>
+			ИНН: 7709918058, КПП: 770901001 </p>
+			<p>
+				<strong>Адрес:</strong>
+				Республика Беларусь, г. Минск <br>
+				ул. Мележа 1, офис 615</p>
+			<p>
+				<strong>Телефоны:</strong>
+				+7 (915) 134-15-90 <br>
+				+7 (915) 173-15-90
+			</p>
+			<p>
+				<strong>почта:</strong>
+				<a href="mailto:info@perfumelon.ru">info@perfumelon.ru</a>
+			</p>
 		</div>
 	</div>
 </div>
