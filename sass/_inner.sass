@@ -252,13 +252,21 @@
 .slider-items
 	.fotorama
 		position: relative
+		height: 400px
 	.fotorama__nav-wrap
 		position: absolute
 		left: 0
 		right: 0
-		bottom: 0
-		z-index: 300
+		top: 360px
+		z-index: 50
+	.fotorama__dot
+		background: $red 
 	.title
-		margin-left: 35px
+		margin: 0 0 13px 64px
 	.fotorama__arr
 		display: none
+	.fotorama__nav, 
+	.fotorama__stage
+		&:before,
+		&:after
+			display: none !important

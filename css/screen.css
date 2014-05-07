@@ -316,10 +316,12 @@ a { text-decoration: none; }
 .item-info__action { margin: 25px 0; }
 .item-info__action .btn { margin-left: 18px; }
 
-.slider-items .fotorama { position: relative; }
-.slider-items .fotorama__nav-wrap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 300; }
-.slider-items .title { margin-left: 35px; }
+.slider-items .fotorama { position: relative; height: 400px; }
+.slider-items .fotorama__nav-wrap { position: absolute; left: 0; right: 0; top: 360px; z-index: 50; }
+.slider-items .fotorama__dot { background: #f37777; }
+.slider-items .title { margin: 0 0 13px 64px; }
 .slider-items .fotorama__arr { display: none; }
+.slider-items .fotorama__nav:before, .slider-items .fotorama__nav:after, .slider-items .fotorama__stage:before, .slider-items .fotorama__stage:after { display: none !important; }
 
 .fotorama__html, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe { position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; bottom: 0; }
 
@@ -555,6 +557,7 @@ a { text-decoration: none; }
 .item .badge { top: 11px; }
 .item .is-new { right: 15px; z-index: 3; }
 .item .is-discount { right: 54px; }
+.item .price-old { margin-left: 16px; }
 
 .item__in { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: white; -webkit-transition: box-shadow 0.2s linear; -moz-transition: box-shadow 0.2s linear; -o-transition: box-shadow 0.2s linear; transition: box-shadow 0.2s linear; }
 
@@ -570,7 +573,7 @@ a { text-decoration: none; }
 .item__name a:active:after { margin-left: 20px; }
 .item__name a:after { content: ""; display: inline-block; margin-left: 8px; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 8px; border-color: transparent transparent transparent #8e4d43; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 
-.item__price { color: #f37777; font-size: 18px; font-family: "pfdintextpro-regular", Arial, sans-serif; }
+.item__price { display: inline-block; vertical-align: middle; color: #f37777; font-size: 18px; font-family: "pfdintextpro-regular", Arial, sans-serif; }
 
 .btn-action { display: inline-block; padding: 12px 28px 9px; font-size: 10px; text-transform: uppercase; color: white; font-family: "pfdintextpro-medium", Arial, sans-serif; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: #f37777; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .btn-action:hover { background: #ff5151; }
