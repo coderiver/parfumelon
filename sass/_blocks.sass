@@ -37,29 +37,24 @@
 .item
 	position: relative
 	float: left
-	margin: 0 0 -1px -2px
+	margin: 0 0 -1px 0
 	border: 1px solid $border
+	border-left: 0
 	width: 20%
 	height: 331px
 	background: #fff 
 	+tr
+	+box
 	&:nth-child(5n)
 		border-right: 0
-	&:nth-child(5n+1)
-		border-left: 0
-		margin-left: 0  
 	+r(w1100)
 		width: 25%
 		&:nth-child(5n)
 			border-right: 1px solid $border
-		&:nth-child(5n+1)
-			border-left: 1px solid $border
-			margin-left: -2px 
+			.item__in
+				right: 0
 		&:nth-child(4n)
 			border-right: 0
-		&:nth-child(4n+1)
-			border-left: 0
-			margin-left: 0 
 	&:hover
 		z-index: 100
 		border-color: #fff
@@ -69,11 +64,6 @@
 			margin-top: 21px
 		.item__in
 			bottom: -38px
-			// top: -1px
-			// right: -1px
-			// left: -1px
-			// bottom: -1px
-			// padding: 1px
 			+box-shadow(0 0 30px rgba(#000, .5))
 	.btn-action
 		display: block
