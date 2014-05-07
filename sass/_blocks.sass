@@ -29,7 +29,9 @@
 		+tr(all .1s linear)
 .title
 	font-size: 24px
+	line-height: 28px
 	+light
+	letter-spacing: 1px 
 	font-weight: normal
 	text-transform: uppercase
 
@@ -252,3 +254,27 @@
 	+reg
 	color: $gray
 	text-decoration: line-through 
+	
+.link-back
+	display: inline-block
+	margin: 65px 0 0 
+	position: relative
+	margin-left: 19px
+	color: $brown
+	text-decoration: underline
+	+tr
+	&:hover
+		text-decoration: underline
+		color: $brown_l 
+		&:before
+			+arr(8,9,$brown_l,l)
+	&:before
+		content: "" 
+		position: absolute
+		left: -19px
+		top: 5px
+		+tr
+		+arr(8,9,$brown,l)
+	&:active
+		&:before
+			left: -25px
