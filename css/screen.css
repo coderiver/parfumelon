@@ -249,6 +249,7 @@ a { text-decoration: none; }
 .content ul { margin: 22px 0; }
 .content ul li { position: relative; margin-bottom: 6px; padding-left: 56px; }
 .content ul li:before { content: ""; position: absolute; left: 18px; top: 4px; width: 8px; height: 8px; background: #fbf6a7; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.content h3 { margin: 28px 0 12px; text-transform: uppercase; font-size: 12px; }
 
 .content_top-bg { background: url(../img/bg-img1.png) 8px 51px no-repeat; }
 
@@ -263,8 +264,10 @@ blockquote p:last-child { text-align: right; }
 .content__main, .content__in { overflow: hidden; }
 .content__main div, .content__in div { -webkit-column-count: 2; -moz-column-count: 2; -ms-column-count: 2; -o-column-count: 2; column-count: 2; -webkit-column-gap: 25px; -moz-column-gap: 25px; -ms-column-gap: 25px; -o-column-gap: 25px; column-gap: 25px; }
 
-.content__in { padding: 50px 0 105px 111px; width: 690px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.content__in { padding: 50px 0 105px 111px; width: 690px; overflow: visible; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .content__in img { margin: 9px 0 50px; }
+.content__in hr { margin: 76px 0 52px -115px; width: 795px; }
+.content__in img { max-width: 690px; height: auto; }
 
 .top-section { position: relative; padding: 44px 35px 0; text-align: center; background: url(../img/top-bg.jpg) 50% -115px no-repeat; }
 .top-section:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; background: rgba(225, 163, 192, 0.85); }
