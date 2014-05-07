@@ -35,6 +35,10 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: pfdintextpro-bold; src: url("../fonts/pfdintextpro-bold.eot"); src: url("../fonts/pfdintextpro-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/pfdintextpro-bold.woff") format("woff"), url("../fonts/pfdintextpro-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
+html::-webkit-scrollbar { width: 8px; height: 8px; overflow: hidden; background: white; }
+html::-webkit-scrollbar-thumb { background: #f37777; }
+html::-webkit-scrollbar-track-piece { width: 8px; }
+
 body { min-width: 1024px; min-height: 500px; font-size: 12px; line-height: 1.5; color: #57231b; font-family: "pfdintextpro-medium", Arial, sans-serif; background: #e5e4dc; text-transform: uppercase; }
 body ::selection { background: #fffcce; }
 body ::-moz-selection { background: #fffcce; }
