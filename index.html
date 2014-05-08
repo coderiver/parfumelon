@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Index</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body>
+<body class="index-page">
 
 <!-- BEGIN  out-->
 <div class="out">
@@ -63,7 +63,7 @@
 					<a href="#" class="soc__tw"></a>
 				</div>
 				<div class="header__right-in">
-					<a class="header__feedback" href="#">связаться с нами</a>
+					<a class="header__feedback js-popup-link" data-popup="js-popup-feedback" href="#">связаться с нами</a>
 					<div class="header__cab">
 						<a href="#">Войти</a>
 						<!-- <button class="header__logout"></button> -->
@@ -142,7 +142,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="banner-row">
+	<div class="banner-row js-header-target">
 		<div class="banner-row__slider">
 			<div class="fotorama" data-arrows="false">
 				<div class="banner-row__slide">
@@ -450,6 +450,46 @@
 	</div>
 	<a href="#" class="footer__logo"></a>
 </footer>
+<div class="overlay js-overlay">
+	<div class="popup js-popup-feedback popup_width js-popup">
+		<div class="popup__left">
+			<div class="title">контакты</div>
+			<div class="cont">
+				<div class="cont__title">Телефоны:</div>
+				<div>+7 (915) <strong>134-15-90</strong></div>
+				<div>+7 (915) <strong>173-15-90</strong></div>
+			</div>
+			<div class="cont">
+				<div class="cont__title">почта:</div>
+				<a href="mailto:info@perfumelon.ru">info@perfumelon.ru</a>
+			</div>
+		</div>
+		<div class="popup__right">
+			<div class="title">Вам перезвонить?</div>
+			<div class="popup__right-in">
+				<form class="js-validate-form">
+					<div class="input-wrap">
+						<label class="label label_vertical" for="firstname">
+							<span class="label__text">ваше имя<sup>*</sup></span>
+							<input class="input" type="text" name="firstname" id="firstname" required>
+						</label>
+					</div>
+					<div class="input-wrap">
+						<label class="label label_vertical" for="tel">
+							<span class="label__text">Телефон<sup>*</sup></span>
+							<input class="input" type="tel" name="tel" id="tel" required>
+							<a href="#" class="forgot-pass">Забыли пароль?</a>
+						</label>
+					</div>
+					<div class="input-wrap">
+						<input class="btn-action btn-action_big" type="submit" value="перезвоните мне">
+					</div>
+				</form>
+			</div>
+		</div>
+		<button class="popup__close js-popup-close"></button>
+	</div>
+</div>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

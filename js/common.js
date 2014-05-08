@@ -1,6 +1,9 @@
 head.ready(function() {
 	$(document).click(function(){
 		$(".js-search").removeClass("is-active");
+		//$(".js-popup").hide();
+		$(".js-overlay").hide();
+		$("body").removeClass("has-open-popup");
 	});  
 	$(".js-search-key").on("click", function(event){
 		$(this).parents(".js-search").addClass("is-active");
@@ -19,22 +22,18 @@ head.ready(function() {
 		return false;
 	});
 	function fixedMenu() {
-        if ($(window).scrollTop() > 0) {
-            $("body").addClass("has-fixed-header");
+		var top =  $(".js-header-target").offset().top;
+        if ($(window).scrollTop() >= top) {
+            $("body.index-page").addClass("has-fixed-header");
         }
         else {
-             $("body").removeClass("has-fixed-header");
+             $("body.index-page").removeClass("has-fixed-header");
         }
     }
     fixedMenu();
     $(document).scroll(function(){
         fixedMenu();
     });
-    console.log($(window).width());
-    $(window).resize(function(){
-    	console.log($(window).width());
-    })
-
     $(".js-sort-special-key a").on("click", function(){
     	var el = $(this).attr("href");
     	if ($(this).hasClass("is-active")) {
@@ -154,13 +153,9 @@ head.ready(function() {
 				messages: {
 					firstname: "Вас так зовут?",
 					lastname: "У вас такая фамилия?",
-					// username: {
-					// 	required: "Please enter a username",
-					// 	minlength: "Your username must consist of at least 2 characters"
-					// },
 					password: {
 						required: "Пароли не совпадают",
-						minlength: "Минимум 5 символов",
+						minlength: "Минимум 5 символов"
 					},
 					confirm_password: {
 						required: "Пароли не совпадают",
@@ -169,7 +164,6 @@ head.ready(function() {
 					},
 					email: "Неверный формат",
 					address: "Это Ваш адрес?",
-					//tel: "Телефон с ошибкой :(",
 					tel: {
 						required: "Телефон с ошибкой",
 						phoneUS: "Please enter a valid phone number: (e.g. 19999999999 or 9999999999)"
@@ -178,35 +172,50 @@ head.ready(function() {
 						required: "Это Ваш вопрос?",
 						minlength: "Это Ваш вопрос?"
 					}
-					//agree: "Please accept our policy"
 				}
 			});
 		}
 	});
 	$(".js-enter-form").each(function(){
-			if ($(this).length > 0) {
-				$(this).validate({
-					errorClass: "has-error",
-					rules: {
-						password: {
-							required: true,
-							minlength: 5
-						},
-						email: {
-							required: true,
-							email: true
-						},
+		if ($(this).length > 0) {
+			$(this).validate({
+				errorClass: "has-error",
+				rules: {
+					password: {
+						required: true,
+						minlength: 5
 					},
-					messages: {
-						password: {
-							required: "Неверный пароль",
-							minlength: "Минимум 5 символов",
-						},
-						email: "Неверный формат",
-					}
-				});
-			}
-		});
+					email: {
+						required: true,
+						email: true
+					},
+				},
+				messages: {
+					password: {
+						required: "Неверный пароль",
+						minlength: "Минимум 5 символов"
+					},
+					email: "Неверный формат"
+				}
+			});
+		}
+	});
+
+	$(".js-popup-link").on("click", function(event){
+		var popup = $(this).attr("data-popup");
+		$("body").addClass("has-open-popup");
+		$("."+popup).parent().fadeIn(200);
+		event.stopPropagation();
+		return false;
+	});
+  	$(".js-popup-close").on("click", function(){
+  		$(".js-overlay").fadeOut(200); 
+  		$("body").removeClass("has-open-popup")
+		return false;
+	});
+  	$(".js-popup").on("click", function(event){
+		event.stopPropagation();
+	});
 
 });
 

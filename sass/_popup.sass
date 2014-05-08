@@ -1,0 +1,92 @@
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 20000
+	background: $red 
+	background: rgba($red,.9)
+	text-align: center
+	overflow: auto
+	+scrollbar
+		width: 8px
+		height: 8px
+		overflow: hidden
+		background: #fff
+	+scrollbar-thumb
+		background: $red
+	+scrollbar-track-piece   
+		width: 8px 
+.popup
+	position: relative
+	display: inline-block
+	//margin-top: 265px
+	margin: 50px 0
+	border: 4px solid $yell
+	padding: 40px 44px 
+	background: #fff 
+	font-size: 12px
+	+arial
+	text-transform: none
+	+box
+	.input-wrap
+		margin-bottom: 16px
+		width: 100%
+		.btn-action
+			margin-top: 14px
+			padding: 17px 28px 15px 
+			width: 100%
+		.forgot-pass   
+			right: 8px
+			top: 30px
+	.has-error
+		margin-left: 0
+		text-align: left
+	.input_textarea
+		height: 69px
+	.link-back
+		margin-top: 30px
+.popup_small
+	width: 337px
+.popup_width
+	padding: 40px 50px 40px 82px 
+	width: 645px
+	+clr
+	
+.popup__left
+	float: left
+	width: 190px
+	text-align: left
+.popup__right
+	float: right
+	border-left: 1px solid $border 
+	width: 290px
+	+box
+.popup__right-in
+	padding: 0 25px 0 42px 
+	.input-wrap
+		&:last-child
+			margin-bottom: 0
+.popup__close
+	position: absolute
+	top: -26px
+	right: -34px
+	+s(popup-close)
+.cont
+	margin-bottom: 20px
+	+arial
+	font-size: 14px
+	a
+		color: $red
+		text-decoration: underline
+		font-size: 12px
+		&:hover  
+			text-decoration: none
+.cont__title
+	margin-bottom: 5px
+	letter-spacing: 2px
+	font-size: 12px
+	+med
+	text-transform: uppercase

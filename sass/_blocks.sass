@@ -376,6 +376,16 @@
 	position: relative
 	display: inline-block
 	font-size: 0
+.label_vertical
+	display: block
+	.label__text
+		display: block
+		margin: 0 0 3px 0
+		width: auto
+		text-align: left
+	.input
+		display: block
+		width: 100%
 .label__text
 	position: relative
 	display: inline-block
@@ -384,6 +394,7 @@
 	width: 190px
 	text-align: right
 	font-size: 12px
+	text-transform: uppercase
 	+reg
 	sup
 		display: inline-block
@@ -400,7 +411,7 @@ label
 .input
 	padding: 0 18px 
 	width: 338px
-	height: 36px
+	height: 38px
 	border: 1px solid #f2eb60
 	background: #fffde7
 	color: $brown

@@ -43,6 +43,7 @@ html
 	+scrollbar-track-piece   
 		width: 8px 
 body
+	padding-top: 77px
 	min-width: 1024px
 	min-height: 500px
 	font-size: 12px	
@@ -53,8 +54,37 @@ body
 	text-transform: uppercase
 	+selection
 		background: $yell
-	&.has-fixed-header,
-	&.inner-page
+	&.index-page
+		padding-top: 0
+		.header
+			position: relative
+		.header__key
+			display: none
+		.header__drop
+			visibility: visible
+			position: absolute
+			top: 188px
+			left: 0
+			right: 77px
+			z-index: 1000
+			background: #fff 
+			+opacity(1)
+			+box-shadow(none)
+			+tr(none)  
+		.header__logo
+			left: 0
+			height: 188px
+			line-height: 188px
+			a
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				height: 188px
+				line-height: 188px
+			i
+				+s(logo)
+	&.has-fixed-header
 		padding-top: 77px
 		.header
 			position: fixed
@@ -84,6 +114,11 @@ body
 				line-height: 77px
 			i
 				+s(logo-s)
+	&.has-open-popup
+		overflow: hidden
+		padding-right: 8px
+		.header
+			right: 8px
 a
 	text-decoration: none
 .wrap
@@ -105,11 +140,15 @@ a
 	width: 978px
 
 .header
-	position: relative
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	z-index: 5000
 	min-width: 1024px
-	height: 77px
-	background: #fff	
+	height: 77px	
+	background: #fff 
+	+box-shadow(0 1px 3px rgba(0,0,0,.21))
 	+tr(box-shadow .2s linear)
 	a
 		color: $brown 
@@ -138,7 +177,7 @@ a
 	white-space: nowrap
 .header__key
 	position: relative
-	display: none
+	display: inline-block
 	width: 77px
 	height: 77px
 	z-index: 2000
@@ -152,18 +191,25 @@ a
 		margin: -6px 0 0 -9px
 		+s(nav)
 		+tr
+		visibility: visible
 	&.is-active
 		background: $yell
 		&:before
 			+rotate(180)
 .header__drop
-	//visibility: hidden
+	visibility: hidden
 	position: absolute
-	top: 188px
+	top: 100%
 	left: 0
 	right: 77px
 	z-index: 1000
 	background: #fff 
+	+opacity(0)
+	+box-shadow(0 0 10px rgba(#000,.6))
+	+tr(opacity .2s linear)
+	&.is-active
+		visibility: visible
+		+opacity(1)
 .header__link
 	display: block
 	padding: 14px 0 15px 
@@ -240,25 +286,23 @@ a
 		
 .header__logo	
 	position: absolute
-	left: 0
 	top: 0
 	bottom: 0
 	right: 77px
 	z-index: 2000
+	left: 77px
 	a
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		height: 188px
-		line-height: 188px
+		display: block
+		+hide-text
+		height: 77px
+		line-height: 77px  
 		text-align: center
 		background: #fff
-		+hide-text
+		
 	i
 		display: inline-block
 		vertical-align: middle
-		+s(logo)
+		+s(logo-s)
 
 .header__search
 	position: absolute
@@ -436,12 +480,11 @@ a
 	margin: 0 auto
 	padding: 30px 35px 23px
 	border-top: 1px solid $border
-	max-width: 1158px
+	max-width: 1088px
 	text-transform: none 
 	background: #fff 
 	+clr
 	+arial
-	+box
 	font-size: 0
 	color: $brown
 .footer__copy,
