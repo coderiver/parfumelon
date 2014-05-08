@@ -34,7 +34,8 @@
 	letter-spacing: 1px 
 	font-weight: normal
 	text-transform: uppercase
-
+	span
+		color: $red 
 .items-wrap
 	+clr	
 .item
@@ -44,7 +45,7 @@
 	border: 1px solid $border
 	border-left: 0
 	width: 20%
-	height: 331px
+	height: 335px
 	background: #fff 
 	+tr
 	+box
@@ -66,7 +67,7 @@
 			visibility: visible
 			margin-top: 21px
 		.item__in
-			bottom: -38px
+			bottom: -42px
 			+box-shadow(0 0 30px rgba(#000, .5))
 	.btn-action
 		display: block
@@ -247,6 +248,11 @@
 	border: 1px solid
 	&.is-hot
 		color: $red 
+.price_small
+	height: auto
+	line-height: 1
+	padding: 6px 18px 4px 
+	font-size: 28px	
 .price-old
 	display: inline-block
 	vertical-align: middle
@@ -261,10 +267,13 @@
 	position: relative
 	margin-left: 19px
 	color: $brown
+	+arial
+	font-size: 12px
+	text-transform: none
 	text-decoration: underline
 	+tr
 	&:hover
-		text-decoration: underline
+		text-decoration: none
 		color: $brown_l 
 		&:before
 			+arr(8,9,$brown_l,l)
@@ -278,3 +287,134 @@
 	&:active
 		&:before
 			left: -25px
+			
+.btn-del
+	display: inline-block
+	vertical-align: middle
+	+s(close)
+
+.choose
+	height: 15px
+	input,button
+		display: inline-block
+		vertical-align: middle
+		height: 15px
+.choose__input
+	padding: 0 5px 
+	width: 28px
+	color: $brown
+	+arial
+	font-size: 14px 
+	+box
+	text-align: center
+.choose__plus,
+.choose__minus
+	position: relative
+	border: 1px solid $red
+	width: 15px
+	height: 15px
+	text-align: center
+	+box
+	background: #fff 
+	+tr
+	&:hover
+		background: $red 
+		&:before,
+		&:after
+			background: #fff  
+	&:before
+		content: "" 
+		position: absolute
+		top: 6px
+		left: 3px
+		width: 7px
+		height: 1px
+		background: $brown 
+		+tr
+		
+.choose__plus
+	&:after
+		content: ""
+		position: absolute
+		top: 3px
+		left: 6px
+		height: 7px
+		width: 1px
+		background: $brown  
+		+tr
+.input-group
+	margin-bottom: 72px
+.input-wrap
+	position: relative   
+	width: 569px
+	margin-bottom: 26px
+	+clr
+	.forgot-pass
+		position: absolute
+		right: 18px
+		top: 10px
+		+arial
+		font-size: 12px
+		color: #898875
+		font-style: italic
+		text-decoration: underline
+		text-transform: none
+		&:hover
+			text-decoration: none
+	.btn-action
+		padding: 19px 28px 17px
+		font-size: 12px 
+		float: right
+		width: 338px
+.input-wrap_textarea
+	.label__text,
+	.input
+		vertical-align: top
+	.label__text
+		padding-top: 11px
+.label
+	position: relative
+	display: inline-block
+	font-size: 0
+.label__text
+	position: relative
+	display: inline-block
+	margin-right: 41px
+	vertical-align: middle
+	width: 190px
+	text-align: right
+	font-size: 12px
+	+reg
+	sup
+		display: inline-block
+		vertical-align: top
+		color: $red 
+label
+	&.has-error
+		display: block
+		margin: 2px 0 0 231px
+		+arial
+		font-size: 12px
+		color: $red 	
+		text-transform: none	
+.input
+	padding: 0 18px 
+	width: 338px
+	height: 36px
+	border: 1px solid #f2eb60
+	background: #fffde7
+	color: $brown
+	+reg
+	font-size: 12px 
+	text-transform: uppercase
+	+box
+	+tr
+	&:hover,
+	&:focus
+		background: #fff 
+	&.has-error
+		border-color: $red
+.input_textarea
+	padding: 18px 
+	height: 116px
+	resize: none

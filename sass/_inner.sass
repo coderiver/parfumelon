@@ -462,7 +462,7 @@ blockquote
 		+reg
 		color: $brown
 		+tr
-		&:hover
+		&:hover,
 		&.is-active
 			color: #fff
 			background: $red 
@@ -506,3 +506,237 @@ blockquote
 		color: #fff
 		&:hover
 			text-decoration: none 
+.basket
+	padding: 94px 110px 70px 	
+.basket__footer
+	padding: 27px 23px 0 20px 
+	+clr
+	.link-back	
+		float: left
+		margin-top: 15px
+.basket__action
+	float: right
+	text-align: right
+	.btn
+		margin-right: 3px
+.basket__price
+	margin-bottom: 33px
+	span
+		display: inline-block
+		vertical-align: middle
+		padding-top: 5px
+		margin-right: 30px
+		letter-spacing: 2px
+		font-size: 18px
+		+reg
+	
+
+.table
+	+arial
+	font-size: 14px
+	th
+		padding: 0 0 3px 20px
+		font-weight: normal
+		+bold
+		font-size: 12px
+		letter-spacing: 2px 
+	th,td
+		text-align: left
+		border-bottom: 1px solid $border 
+	td
+		position: relative
+		left: 0
+		padding: 35px 0 35px 20px 
+		vertical-align: middle
+		+tr
+	.is-remove-ready
+		td
+			left: -300px
+			+opacity(0)
+	.btn-del
+		float: right
+		margin: 11px 23px 0 0
+.table__price
+	color: $red
+	+light
+	font-size: 24px
+	vertical-align: middle 
+.table_order
+	td
+		padding: 28px 0 10px 12px 
+	.table__price
+		font-size: 20px
+	sub
+		font-size: 12px
+		text-transform: none
+.basket-item
+	+clr
+	+med
+	font-size: 12px
+.basket-item_small
+	font-size: 11px
+	.basket-item__img
+		width: 67px
+.basket-item__img
+	display: inline-block
+	vertical-align: middle
+	margin-right: 13px
+	width: 80px
+	text-align: left
+	img
+		max-width: 100%
+		height: auto
+.basket-item__main
+	display: inline-block
+	vertical-align: middle
+	line-height: 16px
+	span
+		display: block
+		color: $gray
+		+reg
+	a
+		color: $brown 
+		
+.box
+	position: relative
+	padding: 65px 0 
+	.title
+		width: 630px
+		margin: 0 auto 46px
+		line-height: 30px
+		text-align: center
+.box_search
+	padding: 52px 0 
+	.title
+		margin-bottom: 0
+		width: 530px
+.box__link
+	position: absolute
+	right: 52px
+	top: 74px
+	color: $brown
+	font-size: 12px
+	+med
+	text-decoration: underline 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: -21px
+		+s(list) 
+	&:hover
+		text-decoration: none
+.box__in
+	margin: 0 auto 
+	width: 795px
+	
+.search
+	position: relative 
+	margin: 0 auto 56px
+	width: 434px
+.search__text
+	padding: 0 38px 
+	width: 100%
+	height: 36px
+	border: 1px solid #f2ec61
+	background: #fff
+	+box
+	+reg
+	font-size: 12px
+	color: $brown 
+	text-transform: uppercase
+	letter-spacing: 1px 
+	+tr
+	&:hover,
+	&:focus
+		border-color: $yell_d
+.search__submit
+	position: absolute
+	right: 14px
+	top: 50%
+	margin-top: -9px
+	+s(glass-red-s)
+	+hide-text
+.search__clear
+	position: absolute
+	top: 50%
+	left: 17px
+	margin-top: -4px
+	+s(close)
+	
+.page
+	padding: 65px 6.8% 
+
+.contacts
+	float: left
+	width: 510px
+	background: $yell_d
+	+box
+	.btn-action
+		display: block
+		width: 100%
+		height: 71px
+	.label__text
+		margin-right: 22px
+		width: 87px
+	.input
+		width: 325px
+	label.has-error
+		margin-left: 109px
+.contacts__in
+	padding: 42px 0 22px 38px 
+
+.order-wrap
+	float: right
+	width: 445px
+.order
+	margin: 0 0 31px
+	border: 1px solid #f2ec61
+	+box
+.order__header
+	border-bottom: 1px solid #f2ec61 
+	padding: 29px 25px 5px 
+	text-align: justify
+	line-height: 1
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0
+		visibility: visible
+	a,span
+		display: inline-block
+		color: $brown 
+	a
+		text-transform: none
+		text-decoration: underline
+		+arial 
+		&:hover
+			text-decoration: none
+	span
+		font-size: 18px
+.order__body
+	padding: 0 25px 16px 
+	
+.order__price
+	margin-top: 12px
+	text-align: right
+	span
+		font-size: 14px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 11px
+		
+.message
+	margin: 31px 0 
+	border: 1px solid $red
+	padding: 14px 27px 
+	+box
+	+arial
+	+clr
+	text-transform: none
+	div
+		overflow: hidden
+	.btn
+		float: right
+		margin-left: 15px

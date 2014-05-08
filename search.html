@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CATALOG</title>
+	<title>Search</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -68,11 +68,11 @@
 						<a href="#">Личный кабинет</a>
 						<button class="header__logout"></button>
 					</div>
-					<div class="header__basket">
+					<div class="header__basket has-item">
 						<a href="#" class="header__basket-img">
-							<span><em>0</em></span>
+							<span><em>1</em></span>
 						</a>
-						<a href="#" class="header__basket-info">Корзина пуста</a>
+						<a href="#" class="header__basket-info">12 500р</a>
 					</div>
 				</div>
 			</div>
@@ -83,52 +83,16 @@
 			<div class="breadcrumbs">
 				<a href="#">Главная</a>
 			</div>
-			<h1 class="page-title">каталог продукции</h1>
-			<div class="sort-row">
-				<div class="sort-gender js-sort-gender">
-					<a href="#" class="is-active"><span>ВСе</span></a>
-					<a href="#"><span>женские</span></a>
-					<a href="#"><span>мужские</span></a>
-				</div> 
-				<div class="sort-options js-sort-options">
-					<a href="#" class="is-top-sort"><span>Цена</span></a>
-					<a href="#" class="is-top-sort"><span>Новинки</span></a>
-					<a href="#" class="is-top-sort"><span>Объем</span></a>
-				</div>
-				<div class="sort-special js-sort-special-key">
-					<a href="js-sort-brend">Бренды</a>
-					<a href="js-sort-flavor">Ароматы</a>
-				</div>
-			</div>
+			<h1 class="page-title">поиск</h1>
 		</div>
 	</div>
-	<div class="tags-wrap js-sort-special js-sort-brend">
-		<a href="#" class="tag is-active">Narciso Rodriguez</a>
-		<a href="#" class="tag">Givenchy</a>
-		<a href="#" class="tag">Gucci</a>
-		<a href="#" class="tag">Chanel</a>
-		<a href="#" class="tag">Nina Ricci</a>
-		<a href="#" class="tag">Valentino</a>
-		<a href="#" class="tag">Hugo Boss</a>
-	</div>
-	<div class="tags-wrap js-sort-special js-sort-flavor">
-		<a href="#" class="tag is-active">Цветочные</a>
-		<a href="#" class="tag">Древесные</a>
-		<a href="#" class="tag">Альдегидные</a>
-		<a href="#" class="tag">Шипры</a>
-		<a href="#" class="tag">Восточные</a>
-		<a href="#" class="tag">Растительные</a>
-		<a href="#" class="tag">Цитрусовые</a>
-		<a href="#" class="tag">Фужерные</a>
-		<a href="#" class="tag">Морские</a>
-		<a href="#" class="tag is-active">Древесные</a>
-		<a href="#" class="tag">Альдегидные</a>
-		<a href="#" class="tag">Шипры</a>
-		<a href="#" class="tag">Восточные</a>
-		<a href="#" class="tag">Фруктовые</a>
-		<a href="#" class="tag">Цветочные</a>
-		<a href="#" class="tag">Древесные</a>
-		<a href="#" class="tag">Альдегидные</a>
+	<div class="box box_search">
+		<div class="search js-search">
+			<input type="text" class="search__text js-search-text" value="духи с феромонами">
+			<input type="submit" class="search__submit">
+			<button class="search__clear js-search-clear" type="button"></button>
+		</div>
+		<div class="title">по вашему запросу <span>духи с феромонами</span> найдено 7 позиций</div>
 	</div>
 	<div class="items-wrap">
 		<div class="item">
@@ -237,63 +201,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="item">
-			<div class="item__in">
-				<div class="item__img">
-					<a href="#"><img src="img/item2.png" alt=""></a>
-					<span class="badge is-new">new</span>
-				</div>
-				<div class="item__info">
-					<div class="item__name">
-						<a href="#">Chance de oae (приятный запах кукурузы)</a>
-					</div>
-					<div class="item__price">1 999р</div>
-					<a href="#" class="btn-action">Добавить В корзину</a>
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item__in">
-				<div class="item__img">
-					<a href="#"><img src="img/item3.png" alt=""></a>
-					<span class="badge is-new">new</span>
-				</div>
-				<div class="item__info">
-					<div class="item__name">
-						<a href="#">Chance de oae (приятный запах кукурузы)</a>
-					</div>
-					<div class="item__price">1 999р</div>
-					<a href="#" class="btn-action">Добавить В корзину</a>
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item__in">
-				<div class="item__img">
-					<a href="#"><img src="img/item4.png" alt=""></a>
-					<span class="badge is-new">new</span>
-				</div>
-				<div class="item__info">
-					<div class="item__name">
-						<a href="#">Chance de oae (приятный запах кукурузы)</a>
-					</div>
-					<div class="item__price">1 999р</div>
-					<a href="#" class="btn-action">Добавить В корзину</a>
-				</div>
-			</div>
-		</div>
 	</div>
-	<div class="about content">
-		<div class="content__img">
-			<!-- <img src="http://lorempixel.com/75/75/people" alt=""> -->
-		</div>
-		<div class="content__main">
-			<div class="title">Perfumelon </div>
-			<p><strong>— один из лучших онлайн-магазинов в России. Мы любим, знаем и ответственно относимся к выбору своего товара и потому внимательно следим за всеми.</strong></p>
-			<p>Начиная от самых простых и заканчивая эксклюзивными  новинками парфюмерного рынка, анализируя отзывы профессиональных экспертов и профессиональных потребителей. Покупая аромат у нас, вы выбираете парфюм 
-			с именитой историей, со своим лицом, уже замеченный и оцененный теми, кто в этом хорошо разбирается.</p>
-			<a href="#" class="btn-detail">О компании</a>
-		</div>
+	<div class="pagin">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#" class="is-active">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
 	</div>
 </div>
 <!-- END out-->
