@@ -120,7 +120,7 @@ head.ready(function() {
     	}, 200);
     });
 
-    $(".js-validate").each(function(){
+    $(".js-validate-form").each(function(){
 		if ($(this).length > 0) {
 			$(this).validate({
 				errorClass: "has-error",
