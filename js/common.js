@@ -22,13 +22,16 @@ head.ready(function() {
 		return false;
 	});
 	function fixedMenu() {
-		var top =  $(".js-header-target").offset().top;
-        if ($(window).scrollTop() >= top) {
-            $("body.index-page").addClass("has-fixed-header");
-        }
-        else {
-             $("body.index-page").removeClass("has-fixed-header");
-        }
+		if ($(".js-header-target").length) {
+			var top =  $(".js-header-target").offset().top;
+	        if ($(window).scrollTop() >= top) {
+	            $("body.index-page").addClass("has-fixed-header");
+	        }
+	        else {
+	             $("body.index-page").removeClass("has-fixed-header");
+	        }
+		}
+		
     }
     fixedMenu();
     $(document).scroll(function(){
