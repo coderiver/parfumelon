@@ -43,7 +43,6 @@ html
 	+scrollbar-track-piece   
 		width: 8px 
 body
-	padding-top: 77px
 	min-width: 1024px
 	min-height: 500px
 	font-size: 12px	
@@ -55,7 +54,8 @@ body
 	+selection
 		background: $yell
 	&.index-page
-		padding-top: 0
+		.out
+			padding-top: 0
 		.header
 			position: relative
 		.header__key
@@ -85,7 +85,8 @@ body
 			i
 				+s(logo)
 	&.has-fixed-header
-		padding-top: 77px
+		.out
+			padding-top: 77px
 		.header
 			position: fixed
 			top: 0
@@ -126,14 +127,16 @@ a
 .wrapper
 	overflow: hidden
 .out
-	margin: 0 auto -160px
 	position: relative
+	margin: 0 auto -160px
+	padding-top: 77px
 	max-width: 1158px
 	min-width: 1024px
 	min-height: 100%
 	height: auto !important
 	height: 100%	 
-	//background: #fff 
+	+box
+	background: #fff 
 .push
 	clear: both
 	height: 160px
@@ -478,14 +481,18 @@ a
 	text-align: center
 	
 .footer
+	position: relative
+	z-index: 2
 	margin: 0 auto
 	padding: 30px 35px 23px
 	border-top: 1px solid $border
-	max-width: 1088px
+	height: 160px
+	max-width: 1158px
 	text-transform: none 
 	background: #fff 
 	+clr
 	+arial
+	+box
 	font-size: 0
 	color: $brown
 	overflow: hidden
