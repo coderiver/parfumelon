@@ -409,15 +409,15 @@ blockquote
 			color: $yell_d 
 		.post__title
 			color: #fff
+			text-decoration: none
 			&:after
 				visibility: visible
 				+opacity(1)
 .post__img
-	display: block
 	height: 185px
 	line-height: 195px
 	text-align: center
-	overflow: hidden
+	overflow: hidden 
 .post__main
 	padding: 10px 24px 10px
 	overflow: hidden
@@ -435,8 +435,6 @@ blockquote
 		visibility: hidden
 		+opacity(0)
 		+tr
-	&:hover
-		text-decoration: none 
 	&:active
 		&:after
 			margin-left: 20px
@@ -508,6 +506,10 @@ blockquote
 			text-decoration: none 
 .basket
 	padding: 94px 110px 70px 	
+.basket__message
+	font-size: 36px
+	text-align: center
+	+light
 .basket__footer
 	padding: 27px 23px 0 20px 
 	+clr

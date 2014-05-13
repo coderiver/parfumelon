@@ -114,12 +114,20 @@ head.ready(function() {
     choose();
 
     $(".js-del-row").on("click", function(){
-    	$(this).parents("tr").addClass("is-remove-ready");
-    	setTimeout(function(){
-    		$("tr.is-remove-ready").remove();
-    	}, 200);
-    });
+    	if ($(".js-basket").find("tbody tr").length >= 2) {
+    		$(this).parents("tr").addClass("is-remove-ready");
+	    	setTimeout(function(){
+	    		$("tr.is-remove-ready").remove();
+	    	}, 200);
+    	}
+	    else {
+	    	$(".js-basket").remove();
+	    	$(".js-basket-action").remove();
+	    	$(".js-basket-message").removeAttr("hidden");
+	    	//alert();
+	    }
 
+    });
     $(".js-validate-form").each(function(){
 		if ($(this).length > 0) {
 			$(this).validate({
@@ -147,7 +155,7 @@ head.ready(function() {
 					tel: {
 						required: true,
 						minlength: 2,
-						phoneUS: true
+      					digits: true
 					},
 					address: {
 						required: false,
@@ -173,7 +181,7 @@ head.ready(function() {
 					address: "Это Ваш адрес?",
 					tel: {
 						required: "Телефон с ошибкой",
-						phoneUS: "Please enter a valid phone number: (e.g. 19999999999 or 9999999999)"
+						digits: "Только цифры без пробелов"
 					},
 					message: {
 						required: "Это Ваш вопрос?",

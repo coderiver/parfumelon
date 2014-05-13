@@ -68,7 +68,7 @@ body
 			right: 77px
 			z-index: 1000
 			background: #fff 
-			+opacity(1)
+			opacity: 1
 			+box-shadow(none)
 			+tr(none)  
 		.header__logo
@@ -99,7 +99,7 @@ body
 		.header__drop
 			visibility: hidden
 			top: 100%
-			+opacity(0)
+			opacity: 0
 			+box-shadow(0 0 10px rgba(#000,.6))
 			+tr(opacity .2s linear)
 			&.is-active
@@ -107,6 +107,7 @@ body
 				+opacity(1)
 		.header__logo
 			left: 77px
+			height: 77px
 			line-height: 77px
 			a
 				position: static
@@ -209,7 +210,7 @@ a
 	right: 77px
 	z-index: 1000
 	background: #fff 
-	+opacity(0)
+	opacity: 0
 	+box-shadow(0 0 10px rgba(#000,.6))
 	+tr(opacity .2s linear)
 	&.is-active

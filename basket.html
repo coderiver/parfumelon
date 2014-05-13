@@ -87,7 +87,7 @@
 		</div>
 	</div>	
 	<div class="basket">
-		<table class="table table_width-basket">
+		<table class="table table_width-basket js-basket">
 			<thead>
 				<tr>
 					<th class="table__col1">наименование Товара</th>
@@ -165,9 +165,12 @@
 				</tr>
 			</tbody>
 		</table>
+		<div class="basket__message js-basket-message" hidden>
+			Корзина пуста
+		</div>
 		<div class="basket__footer">
 			<a href="#" class="link-back">Вернуться в каталог</a>
-			<div class="basket__action">
+			<div class="basket__action js-basket-action">
 				<div class="basket__price">
 					<span>Итоговая сумма:</span>
 					<div class="price price_small is-hot">16 999р</div>
@@ -176,6 +179,7 @@
 				<a href="#" class="btn-action btn-action_big">оформить заказ</a>
 			</div>
 		</div>
+		
 	</div>
 	<div class="push"></div>
 </div>
