@@ -13,10 +13,12 @@
 	+bold
 	font-size: 12px   
 	text-transform: uppercase
-	+tr
+	+tr(background .2s linear)
 	overflow: visible
 	&:hover
 		background: #fff   
+		&:after
+			+sp(arr1-w)
 	&:active
 		&:after
 			right: 15px
@@ -27,7 +29,7 @@
 		right: 30px  
 		margin-top: -7px
 		+s(arr1)
-		+tr(all .1s linear)
+		+tr(right .1s linear)
 .title
 	font-size: 24px
 	line-height: 28px

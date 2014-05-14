@@ -228,7 +228,7 @@ head.ready(function() {
 	});
 
 	if ($(".js-input-tel").length) {
-        $(".js-input-tel").mask("+99(999) 999-99-99");
+        $(".js-input-tel").mask("+999 (99) 999-99-99");
     }
 
 	$(".js-popup-link").on("click", function(event){
