@@ -6,8 +6,10 @@ head.ready(function() {
 		$("body").removeClass("has-open-popup");
 		$(".js-header-drop").removeClass("is-active");
 	});  
+
 	$(".js-search-key").on("click", function(event){
 		$(this).parents(".js-search").addClass("is-active");
+		$(".js-search-text").focus();
 		event.stopPropagation();
 	});
 	$(".js-search").on("click", function(event){

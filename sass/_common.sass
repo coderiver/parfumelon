@@ -131,7 +131,7 @@ a
 	position: relative
 	margin: 0 auto -160px
 	padding-top: 77px
-	max-width: 1158px
+	max-width: 1160px
 	min-width: 1024px
 	min-height: 100%
 	height: auto !important
@@ -162,7 +162,7 @@ a
 	position: relative
 	margin: 0 auto	
 	height: 77px
-	max-width: 1158px
+	max-width: 1160px
 	background: #fff 
 	+box
 .header__left
@@ -354,7 +354,7 @@ a
 	right: 0
 	left: 0
 	bottom: 0
-	//+tr
+	+tr
 .header__search-text
 	display: block
 	width: 100%
@@ -368,7 +368,6 @@ a
 	text-transform: uppercase
 	letter-spacing: 1px
 	background: #fafafa 
-	+tr
 .header__search-btn
 	position: absolute
 	right: 26px
@@ -428,12 +427,16 @@ a
 	a	
 		display: inline-block
 		vertical-align: middle
+		margin-top: -3px
 		padding: 9px 15px 6px
 		text-align: center
 		+bold
 		line-height: 1
 		letter-spacing: 1px 
 		border: 1px solid $yell_d 
+		+tr
+		&:hover
+			color: $red 
 .header__logout
 	position: absolute
 	right: 7px
@@ -445,6 +448,9 @@ a
 	width: 236px
 	background: $yell 
 	line-height: 77px
+	+tr
+	&:hover
+		background: $yell-d 
 	&.has-item
 		.header__basket-info
 			font-size: 24px
@@ -488,7 +494,7 @@ a
 	padding: 30px 35px 23px
 	border-top: 1px solid $border
 	height: 160px
-	max-width: 1158px
+	max-width: 1160px
 	text-transform: none 
 	background: #fff 
 	+clr
