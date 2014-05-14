@@ -62,9 +62,14 @@ head.ready(function() {
     	$(this).addClass("is-active");
 		return false;
 	});
-	$(".js-sort-options a").on("click", function(){
-    	$(".js-sort-options a").removeClass("is-active");
-    	$(this).addClass("is-active is-top-sort");
+	$("body").on("click",".js-sort-options a", function(){
+    	if ($(this).hasClass("is-top-sort")) {
+    		$(this).removeClass("is-top-sort").addClass("is-down-sort");
+    	}
+    	else {
+    		$(".js-sort-options a").removeAttr("class");
+    		$(this).addClass("is-top-sort");
+    	}
 		return false;
 	});
 
@@ -157,7 +162,6 @@ head.ready(function() {
 					tel: {
 						required: true,
 						minlength: 2,
-      					digits: true
 					},
 					address: {
 						required: false,
@@ -182,8 +186,8 @@ head.ready(function() {
 					email: "Неверный формат",
 					address: "Это Ваш адрес?",
 					tel: {
-						required: "Телефон с ошибкой",
-						digits: "Только цифры без пробелов"
+						required: "Это ваш телефон?",
+						//digits: "Только цифры без пробелов"
 					},
 					message: {
 						required: "Это Ваш вопрос?",
@@ -193,7 +197,7 @@ head.ready(function() {
 			});
 		}
 	});
-	$(".js-validate-enter").each(function(){
+	$(".js-enter-form").each(function(){
 		if ($(this).length > 0) {
 			$(this).validate({
 				errorClass: "has-error",
@@ -206,17 +210,26 @@ head.ready(function() {
 						required: true,
 						email: true
 					},
+					email2: {
+						required: true,
+						email: true
+					},
 				},
 				messages: {
 					password: {
 						required: "Неверный пароль",
 						minlength: "Минимум 5 символов"
 					},
-					email: "Неверный формат"
+					email: "Неверный формат",
+					email2: "Неверный формат",
 				}
 			});
 		}
 	});
+
+	if ($(".js-input-tel").length) {
+        $(".js-input-tel").mask("+99(999) 999-99-99");
+    }
 
 	$(".js-popup-link").on("click", function(event){
 		var popup = $(this).attr("data-popup");
